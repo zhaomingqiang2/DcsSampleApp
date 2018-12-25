@@ -1,0 +1,2 @@
+# Referenced at D:\baiduyuyin\DcsSampleApp\DcsSampleApp\app\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:35
+-keep class com.baidu.duer.dcs.sample.sdk.DcsSampleApplication { <init>(...); }
