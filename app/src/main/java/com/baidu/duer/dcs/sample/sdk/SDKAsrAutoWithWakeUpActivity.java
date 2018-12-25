@@ -15,47 +15,14 @@
  *  limitations under the License.
  */
 package com.baidu.duer.dcs.sample.sdk;
-import android.app.AlarmManager;
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.widget.Toast;
 
 import com.baidu.duer.dcs.api.IDcsSdk;
 import com.baidu.duer.dcs.api.IMessageSender;
 import com.baidu.duer.dcs.api.config.DcsConfig;
-import com.baidu.duer.dcs.framework.message.PayloadConfig;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.alarms.AlarmsDeviceModule;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.alarms.message.SetAlarmPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.alarms.message.SetTimerPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.alarms.message.ShowAlarmsPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.alarms.message.ShowTimersPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.app.AppDeviceModule;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.app.message.LaunchAppPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.app.message.TryLaunchAppPayload;
 import com.baidu.duer.dcs.sample.sdk.devicemodule.applauncher.AppLauncherDeviceModule;
 import com.baidu.duer.dcs.sample.sdk.devicemodule.applauncher.AppLauncherImpl;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.applauncher.IAppLauncher;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.applauncher.message.AppInfo;
 import com.baidu.duer.dcs.sample.sdk.devicemodule.asr.AsrDeviceModule;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.devicecontrol.DeviceControlDeviceModule;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.devicecontrol.message.AdjustBrightnessPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.devicecontrol.message.SetAssistiveTouchPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.devicecontrol.message.SetBluetoothPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.devicecontrol.message.SetBrightnessPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.devicecontrol.message.SetCellularModePayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.devicecontrol.message.SetCellularPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.devicecontrol.message.SetGpsPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.devicecontrol.message.SetHotspotPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.devicecontrol.message.SetNfcPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.devicecontrol.message.SetPhoneModePayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.devicecontrol.message.SetPhonePowerPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.devicecontrol.message.SetPortraitLockPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.devicecontrol.message.SetSynchronizationPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.devicecontrol.message.SetVibrationPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.devicecontrol.message.SetVpnPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.devicecontrol.message.SetWifiPayload;
 import com.baidu.duer.dcs.sample.sdk.devicemodule.smarthome.SmartHomeDeviceModule;
 import com.baidu.duer.dcs.sample.sdk.devicemodule.smarthome.message.CloseSmartHomePayload;
 import com.baidu.duer.dcs.sample.sdk.devicemodule.smarthome.message.OpenSmartHomePayload;
@@ -66,9 +33,6 @@ import com.baidu.duer.dcs.sample.sdk.devicemodule.sms.message.SendSmsByNumberPay
 import com.baidu.duer.dcs.util.AsrType;
 import com.baidu.duer.dcs.util.devicemodule.asr.message.HandleAsrResultPayload;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * Created by guxiuzhong@baidu.com on 2017/9/6.
