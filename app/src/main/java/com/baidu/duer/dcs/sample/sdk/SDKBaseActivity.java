@@ -69,11 +69,6 @@ import com.baidu.duer.dcs.router.ICES;
 import com.baidu.duer.dcs.router.IFlow;
 import com.baidu.duer.dcs.sample.BuildConfig;
 import com.baidu.duer.dcs.sample.R;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.app.AppDeviceModule;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.app.message.LaunchAppPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.app.message.TryLaunchAppPayload;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.applauncher.AppLauncherDeviceModule;
-import com.baidu.duer.dcs.sample.sdk.devicemodule.applauncher.AppLauncherImpl;
 import com.baidu.duer.dcs.sample.sdk.devicemodule.screen.ScreenDeviceModule;
 import com.baidu.duer.dcs.sample.sdk.devicemodule.screen.extend.card.ScreenExtendDeviceModule;
 import com.baidu.duer.dcs.sample.sdk.devicemodule.screen.extend.card.message.RenderAudioListPlayload;
@@ -478,7 +473,7 @@ public abstract class SDKBaseActivity extends AppCompatActivity implements
                 //   获取：存储apk内部->存储系统数据库->存储外部文件，都没有则重新生成
                 .withDeviceId(StandbyDeviceIdUtil.getStandbyDeviceId())
                 // 设置音乐播放器的实现，sdk 内部默认实现为MediaPlayerImpl
-                // .withMediaPlayer(new MediaPlayerImpl(AudioManager.STREAM_MUSIC))
+                //.withMediaPlayer(new MediaPlayerImpl(AudioManager.STREAM_MUSIC))
                 .build();
 
         // 设置Oneshot
@@ -495,7 +490,8 @@ public abstract class SDKBaseActivity extends AppCompatActivity implements
         // getInternalApi().setBDuss("");
         // 临时配置结束
         // dbp平台
-        // getInternalApi().setDebugBot("f15be387-1348-b71b-2ae5-8f19f2375ea1");
+        getInternalApi().setDebugBot("04e5d65e-02dc-0cb7-60de-1aa2d2d0341a");
+        getInternalApi().setDebugBot("2e4d74f8-87c3-8b2c-e781-171d15949878");
 
         // 第二步：可以按需添加内置端能力和用户自定义端能力（需要继承BaseDeviceModule）
         // 屏幕展示
